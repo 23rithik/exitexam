@@ -20,7 +20,7 @@ const Mail = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/api/generate-otp', { email });
+      const response = await axios.post('https://exitexam-backend.vercel.app/api/generate-otp', { email });
 
       if (response.status === 201) {
         setOtpSent(true);

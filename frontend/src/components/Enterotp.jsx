@@ -19,7 +19,7 @@ const EnterOtp = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/api/verify-otp', { otp });
+      const response = await axios.post('https://exitexam-backend.vercel.app/api/verify-otp', { otp });
 
       if (response.status === 200) {
         // Redirect to the Welcome page on successful OTP verification
