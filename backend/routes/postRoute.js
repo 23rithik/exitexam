@@ -68,7 +68,7 @@ router.post('/verify-otp', async (req, res) => {
   
       if (otpRecord) {
         // OTP is valid, delete the OTP record to prevent reuse
-        await otpdata.deleteOne({ otp });
+        // await otpdata.deleteOne({ otp });
         return res.status(200).json({ message: 'OTP verified successfully' });
       } else {
         // OTP is invalid
